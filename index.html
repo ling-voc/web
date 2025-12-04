@@ -1,5 +1,288 @@
-<html> 
-    <head> 
-        <title>My First Web Page</title> 
-    </head>
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>我的个人博客</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: 'Microsoft YaHei', Arial, sans-serif;
+            line-height: 1.6;
+            color: #333;
+            background-color: #f4f4f4;
+        }
+        
+        .container {
+            width: 80%;
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+        
+        header {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+            padding: 1rem 0;
+            text-align: center;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+        }
+        
+        .blog-title {
+            font-size: 2.5rem;
+            margin-bottom: 0.5rem;
+        }
+        
+        .blog-subtitle {
+            font-size: 1.2rem;
+            opacity: 0.9;
+        }
+        
+        nav {
+            background-color: #333;
+            padding: 1rem 0;
+        }
+        
+        nav ul {
+            list-style: none;
+            display: flex;
+            justify-content: center;
+            flex-wrap: wrap;
+        }
+        
+        nav li {
+            margin: 0 15px;
+        }
+        
+        nav a {
+            color: white;
+            text-decoration: none;
+            font-weight: bold;
+            transition: color 0.3s;
+        }
+        
+        nav a:hover {
+            color: #667eea;
+        }
+        
+        .main-content {
+            display: flex;
+            flex-wrap: wrap;
+            margin: 20px 0;
+        }
+        
+        .blog-posts {
+            flex: 3;
+            min-width: 300px;
+            margin-right: 20px;
+        }
+        
+        .sidebar {
+            flex: 1;
+            min-width: 250px;
+        }
+        
+        .post {
+            background: white;
+            margin-bottom: 20px;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+        }
+        
+        .post-title {
+            color: #333;
+            margin-bottom: 10px;
+        }
+        
+        .post-meta {
+            color: #777;
+            font-size: 0.9rem;
+            margin-bottom: 15px;
+        }
+        
+        .post-excerpt {
+            margin-bottom: 15px;
+        }
+        
+        .read-more {
+            color: #667eea;
+            text-decoration: none;
+            font-weight: bold;
+        }
+        
+        .read-more:hover {
+            text-decoration: underline;
+        }
+        
+        .widget {
+            background: white;
+            margin-bottom: 20px;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+        }
+        
+        .widget-title {
+            margin-bottom: 15px;
+            padding-bottom: 10px;
+            border-bottom: 2px solid #667eea;
+        }
+        
+        .about-me img {
+            width: 100%;
+            max-width: 200px;
+            border-radius: 50%;
+            display: block;
+            margin: 0 auto 15px;
+        }
+        
+        footer {
+            background: #333;
+            color: white;
+            text-align: center;
+            padding: 20px 0;
+            margin-top: 20px;
+        }
+        
+        @media (max-width: 768px) {
+            .main-content {
+                flex-direction: column;
+            }
+            
+            .blog-posts {
+                margin-right: 0;
+                margin-bottom: 20px;
+            }
+            
+            nav ul {
+                flex-direction: column;
+                align-items: center;
+            }
+            
+            nav li {
+                margin: 5px 0;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- 头部 -->
+    <header>
+        <div class="container">
+            <h1 class="blog-title">我的个人博客</h1>
+            <p class="blog-subtitle">记录生活，分享技术</p>
+        </div>
+    </header>
+    
+    <!-- 导航栏 -->
+    <nav>
+        <div class="container">
+            <ul>
+                <li><a href="#">首页</a></li>
+                <li><a href="#">技术文章</a></li>
+                <li><a href="#">生活随笔</a></li>
+                <li><a href="#">关于我</a></li>
+                <li><a href="#">联系我</a></li>
+            </ul>
+        </div>
+    </nav>
+    
+    <!-- 主要内容 -->
+    <div class="container">
+        <div class="main-content">
+            <!-- 博客文章列表 -->
+            <main class="blog-posts">
+                <article class="post">
+                    <h2 class="post-title">欢迎来到我的博客</h2>
+                    <div class="post-meta">
+                        发布于 2023年10月1日 | 分类: 随笔
+                    </div>
+                    <p class="post-excerpt">
+                        这是我的第一篇博客文章。在这里我会分享我的技术心得、生活感悟以及一些有趣的想法。
+                        希望你能喜欢这里的内容，并与我一起交流学习。
+                    </p>
+                    <a href="#" class="read-more">阅读全文 →</a>
+                </article>
+                
+                <article class="post">
+                    <h2 class="post-title">Python编程入门指南</h2>
+                    <div class="post-meta">
+                        发布于 2023年9月25日 | 分类: 技术
+                    </div>
+                    <p class="post-excerpt">
+                        Python是一门非常适合初学者的编程语言。它语法简洁，功能强大，
+                        被广泛应用于Web开发、数据分析、人工智能等领域。本文将带你快速入门Python编程。
+                    </p>
+                    <a href="#" class="read-more">阅读全文 →</a>
+                </article>
+                
+                <article class="post">
+                    <h2 class="post-title">旅行中的思考</h2>
+                    <div class="post-meta">
+                        发布于 2023年9月15日 | 分类: 生活
+                    </div>
+                    <p class="post-excerpt">
+                        最近去了趟西安，看到了兵马俑，感受到了历史的厚重。旅行不仅是为了看风景，
+                        更是为了在行走中发现不一样的自己，获得新的灵感和思考。
+                    </p>
+                    <a href="#" class="read-more">阅读全文 →</a>
+                </article>
+            </main>
+            
+            <!-- 侧边栏 -->
+            <aside class="sidebar">
+                <div class="widget about-me">
+                    <h3 class="widget-title">关于我</h3>
+                    <img src="https://via.placeholder.com/200" alt="博主头像">
+                    <p>程序员，热爱技术与写作，喜欢分享自己的经验和见解。</p>
+                </div>
+                
+                <div class="widget">
+                    <h3 class="widget-title">分类目录</h3>
+                    <ul>
+                        <li><a href="#">技术 (15)</a></li>
+                        <li><a href="#">生活 (8)</a></li>
+                        <li><a href="#">旅行 (5)</a></li>
+                        <li><a href="#">读书 (3)</a></li>
+                    </ul>
+                </div>
+                
+                <div class="widget">
+                    <h3 class="widget-title">最新文章</h3>
+                    <ul>
+                        <li><a href="#">欢迎来到我的博客</a></li>
+                        <li><a href="#">Python编程入门指南</a></li>
+                        <li><a href="#">旅行中的思考</a></li>
+                        <li><a href="#">如何提高工作效率</a></li>
+                    </ul>
+                </div>
+                
+                <div class="widget">
+                    <h3 class="widget-title">标签云</h3>
+                    <div>
+                        <a href="#" style="display:inline-block; margin:5px; color:#667eea;">Python</a>
+                        <a href="#" style="display:inline-block; margin:5px; color:#764ba2;">Web开发</a>
+                        <a href="#" style="display:inline-block; margin:5px; color:#667eea;">旅行</a>
+                        <a href="#" style="display:inline-block; margin:5px; color:#764ba2;">生活</a>
+                        <a href="#" style="display:inline-block; margin:5px; color:#667eea;">技术</a>
+                    </div>
+                </div>
+            </aside>
+        </div>
+    </div>
+    
+    <!-- 底部 -->
+    <footer>
+        <div class="container">
+            <p>&copy; 2023 我的个人博客. All rights reserved.</p>
+            <p>联系邮箱: example@email.com | 微信: myblog</p>
+        </div>
+    </footer>
+</body>
 </html>
